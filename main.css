@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    /* outline: 2px solid red; */
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+#utils {
+    display: flex;
+    padding: 5px;
+    background-color: aqua;
+}
+
+#search {
+    flex-grow: 1;
+    align-self: center;
+}
+#newNote {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+#create {
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+}
+#filter {
+    flex-grow: 1;
+    align-self: center;
+}
+
+#notesarea {
+    display: flex;
+    flex-wrap: wrap;
+    /*grid-template-columns: auto auto auto;*/
+    justify-content: right;
+    padding-right: 65px;
+}
+
+/**********************NOTE CARD STYLE*******************/
+/********************************************************/
+.note {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 30px;
+    margin: 10px;
+}
+.note:hover {
+    transform: scale(1.03);
+    border-color: rgb(141, 131, 131);
+    box-shadow: 10px 10px 5px rgb(140, 148, 151);
+}
+.content {
+    flex-grow: 10;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: cadetblue;
+}
+.controllers {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.important, .edit, .delete {
+    display: flex;
+    border: none;
+    padding-top: 15px;
+}
+.important {
+    flex-grow: 2;
+    border-bottom-left-radius: 25px;
+    padding-left: 15px;
+}
+.edit {
+    flex-grow: 3;
+    justify-content: right;
+}
+.delete {
+    flex-grow: 1;
+    border-bottom-right-radius: 25px;
+    justify-content: center;
+    padding-right: 15px;    
+}
+
+/*********************************************************/
+/*********************************************************/
+
+@media (max-width: 600px) {
+    #notesarea {
+        /*grid-template-columns: auto;*/
+        padding-left: 0;
+    }
+    .note {
+        width: 330px;
+    }
+}
